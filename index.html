@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="todo-app">
+      <div class="app-header">
+        <img src="icon.png" alt="Todo icon" class="app-icon" />
+        <h1>To Do List</h1>
+      </div>
+
+      <div class="input-row">
+        <input
+          id="taskInput"
+          class="task-input"
+          type="text"
+          placeholder="Add a task"
+        />
+        <button id="addBtn" class="add-btn" type="button">Add</button>
+      </div>
+
+      <ul id="taskList" class="task-list">
+        <!-- <li class="task-item">
+          <button
+            class="check-btn unchecked"
+            type="button"
+            aria-label="Mark task as complete"
+          ></button>
+          <span class="task-text">Plan the weekly goals</span>
+          <button class="delete-btn" type="button">Delete</button>
+        </li>
+
+        <li class="task-item completed">
+          <button
+            class="check-btn checked"
+            type="button"
+            aria-label="Mark task as incomplete"
+          ></button>
+          <span class="task-text">Review the design mockup</span>
+          <button class="delete-btn" type="button">Delete</button>
+        </li> -->
+      </ul>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
