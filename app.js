@@ -2,9 +2,7 @@ let textBox = document.querySelector("#taskInput");
 let addBtn = document.querySelector("#addBtn");
 let taskList = document.querySelector("#taskList");
 
-let list = document.createElement("li");
-let delBtn = document.createElement("button");
-let checkBtn = document.createElement("button");
+
 
 addBtn.addEventListener("click", () => {
   let userInput = textBox.value;
@@ -13,7 +11,7 @@ addBtn.addEventListener("click", () => {
     alert("Please enter a task");
   } else {
     let list = document.createElement("li");
-    let text = document.createElement("span")
+    let text = document.createElement("span");
     let delBtn = document.createElement("button");
     let checkBtn = document.createElement("button");
 
@@ -21,18 +19,22 @@ addBtn.addEventListener("click", () => {
     list.appendChild(checkBtn);
 
     list.classList.add("task-item");
-    text.classList.add("task-text")
+    text.classList.add("task-text");
     text.textContent = userInput;
-    list.appendChild(text)
-   
+    list.appendChild(text);
+
     delBtn.textContent = "Delete";
     delBtn.classList.add("delete-btn");
     list.appendChild(delBtn);
     taskList.appendChild(list);
+    delBtn.addEventListener("click", () => {
+      list.remove();
+    });
+    checkBtn.addEventListener("click",() => {
+      checkBtn.classList.add("check-btn","checked")
+      text.style.textDecoration = "line-through"
+      text.style.color = "#c7d1d5"
+    })
   }
-  userInput = "";
-});
-
-delBtn.addEventListener("click", () => {
-  list.remove();
+  textBox.value = "";
 });

@@ -111,6 +111,7 @@ body {
 
 .check-btn.checked {
   background-image: url("checked.png");
+  text-decoration: line-through;
 }
 
 .task-text {
@@ -130,10 +131,9 @@ body {
   background: #fff0ee;
   color: #d75f5f;
   border-radius: 10px;
-  padding: 8px 12px ;
+  padding: 8px 12px;
   font-size: 0.8rem;
   cursor: pointer;
- 
 }
 
 @media (max-width: 480px) {
